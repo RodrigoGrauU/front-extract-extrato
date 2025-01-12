@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Upload de Arquivo</title>
+</head>
+<body>
+<h1>Envio de para Processar</h1>
+
+<form action="/upload" method="post" enctype="multipart/form-data">
+    <label for="file">Selecione o arquivo para processar: </label>
+    <input type="file" id="file" name="file" accept=".xlsx" required>
+    </br>
+    <label for="banco">Selecione o banco Desejado</label>
+    <select name="banco" id="banco">
+        <option value="">Selecione..</option>
+        <option value="btg">BTG Pactual</option>
+        <option value="bb"> Banco do Brasil</option>
+    </select>
+    <button type="submit">Enviar</button>
+</form>
+
+<div th:if="${message}">
+    <h3 th:text="${message}"></h3>
+</div>
+
+<!--/*@thymesVar id="content" type=""*/-->
+<div th:if="${content}">
+    <h3>Conteúdo do Arquivo:</h3>
+    <pre th:text="${content}"></pre>
+</div>
+</body>
+</html>
