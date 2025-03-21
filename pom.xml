@@ -46,7 +46,7 @@
 		<dependency>
 			<groupId>com.rvsoftware</groupId>
 			<artifactId>extract-extrato</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>0.0.2</version>
 		</dependency>
 	</dependencies>
 
